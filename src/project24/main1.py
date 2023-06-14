@@ -37,4 +37,4 @@ cv2.waitKey(0)
 # 이미지 창이 닫히지 않도록 하는 역할
 
 cv2.destroyAllWindows()
-# 모든 이미지 창 닫기
+# 모든 이미지 창 닫기 

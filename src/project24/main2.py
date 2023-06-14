@@ -7,7 +7,6 @@ img = cv2.resize(img, dsize=(0,0), fx=1.0, fy=1.0, interpolation=cv2.INTER_LINEA
 
 def onChange(pos):
     pass
-# 함수 트랙바 값이 변경횔때 호출되는 콜백함수
 
 cv2.namedWindow("Trackbar Windows")
 #  "Trackbar Windows"라는 이름의 창을 생성
