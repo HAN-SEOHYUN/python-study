@@ -1,12 +1,10 @@
-## Ex 10-5. 간단한 그림판 프로그램.
-
 import sys
 from PyQt5 import QtGui, uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
-ui_path = r'src/project30/그림판.ui'
+ui_path = r'src/project34/그림판.ui'
 form_class = uic.loadUiType(ui_path)[0]
 
 class MyApp(QMainWindow,form_class):
@@ -14,10 +12,10 @@ class MyApp(QMainWindow,form_class):
     def __init__(self):
         super().__init__()
         self.image = QImage(QSize(400, 400), QImage.Format_RGB32)
-        self.image.fill(Qt.white)
+        self.image.fill(Qt.black)
         self.drawing = False
         self.brush_size = 5
-        self.brush_color = Qt.black
+        self.brush_color = Qt.red
         self.last_point = QPoint()
         self.initUI()
         
@@ -48,7 +46,7 @@ class MyApp(QMainWindow,form_class):
         # setShortcut()을 이용해서 각각의 단축키를 설정
         # 각각의 액션은 self.save와 self.clear 메서드에 연결된다.
 
-        self.setWindowTitle('Simple Painter')
+        self.setWindowTitle('그림판')
         self.setGeometry(300, 300, 400, 400)
         self.show()
 
@@ -90,10 +88,7 @@ class MyApp(QMainWindow,form_class):
         self.image.fill(Qt.white)
         self.update()
         
-        # 파일 메뉴에서 ‘Save’ 버튼 또는 ‘Ctrl+S’ 단축키를 누르면 이미지가 저장됨
         # QFileDialog.getSaveFileName()은 파일을 저장할 때 사용자로부터 파일명을 입력받아서 반환한다.
-        # 마지막 파라미터에는 저장할 이미지의 확장자로 지정할 옵션을 입력한다.
-        # 파일 메뉴에서 ‘Clear’ 버튼 또는 ‘Ctrl+C’ 단축키를 누르면 그림판이 지워진다.
 
 
 if __name__ == '__main__':

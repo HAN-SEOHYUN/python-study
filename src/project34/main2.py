@@ -18,16 +18,16 @@ class WindowClass(QMainWindow, form_class):
         self.canvas.fill(QtGui.QColor("white"))
         self.lb_canvas.setPixmap(self.canvas)
 
-        # self.btn_black.clicked.connect(self.btn_clicked)
-        # self.btn_black.setStyleSheet('background:black')
+        self.btn_black.clicked.connect(self.btn_clicked)
+        self.btn_black.setStyleSheet('background:black')
 
-        # self.btn_blue.clicked.connect(self.btn_clicked)
-        # self.btn_blue.setStyleSheet('background:blue')
+        self.btn_blue.clicked.connect(self.btn_clicked)
+        self.btn_blue.setStyleSheet('background:blue')
 
-        # self.btn_red.clicked.connect(self.btn_clicked)
-        # self.btn_red.setStyleSheet('background:red')
+        self.btn_red.clicked.connect(self.btn_clicked)
+        self.btn_red.setStyleSheet('background:red')
 
-        # self.btn_clear.clicked.connect(self.btn_clear_clicked)
+        self.btn_clear.clicked.connect(self.btn_clear_clicked)
 
     def btn_clicked(self):
         btn_value = self.sender().objectName()
